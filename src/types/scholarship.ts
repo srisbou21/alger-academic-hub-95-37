@@ -52,20 +52,35 @@ export interface ScholarshipApplication {
   scholarshipTitle: string;
   applicantId: string;
   applicantName: string;
+  applicantType: 'enseignant' | 'personnel_administratif' | 'etudiant';
+  selectedApplicant?: any; // Données de l'enseignant/personnel depuis GRH
   personalInfo: {
-    userType: 'enseignant' | 'personnel_administratif' | 'etudiant_beneficiaire';
-    grade?: string; // Pour enseignants/personnel
-    department: string;
-    experience?: number; // Pour enseignants/personnel
-    currentPosition: string;
-    studentLevel?: string; // Pour étudiants (licence, master, doctorat)
-    studentId?: string; // Pour étudiants
+    userType: 'enseignant' | 'personnel_administratif' | 'etudiant';
+    // Pour étudiants
+    nomArabe?: string;
+    nomFrancais?: string;
+    prenomArabe?: string;
+    prenomFrancais?: string;
+    matricule?: string;
+    dateNaissance?: string;
+    lieuNaissanceArabe?: string;
+    lieuNaissanceFrancais?: string;
+    niveauEtude?: string;
+    moyenneAnneeActuelle?: number;
+    // Pour enseignants/personnel
+    grade?: string;
+    department?: string;
+    experience?: number;
+    currentPosition?: string;
   };
-  motivation: {
-    objectives: string;
-    expectedOutcomes: string;
-    relevanceToWork: string;
-    personalStatement: string;
+  scholarshipInfo: {
+    destinationVoulue: string;
+    universiteReceptrice: string;
+    beneficiePrecedente: boolean;
+    consommePrecedente?: boolean;
+    derniereAnneeBourse?: string;
+    planProjet: string;
+    objectifs: string;
   };
   documents: Array<{
     type: string;

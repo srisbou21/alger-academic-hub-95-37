@@ -86,6 +86,7 @@ class ScholarshipService {
         scholarshipTitle: "Formation en IA - MIT",
         applicantId: "teacher1",
         applicantName: "Dr. Ahmed Benali",
+        applicantType: "enseignant",
         personalInfo: {
           userType: "enseignant",
           grade: "Maitre de Conférences A",
@@ -93,11 +94,13 @@ class ScholarshipService {
           experience: 8,
           currentPosition: "Enseignant-Chercheur"
         },
-        motivation: {
-          objectives: "Approfondir mes connaissances en IA pour améliorer mes cours",
-          expectedOutcomes: "Intégrer les dernières avancées dans le curriculum",
-          relevanceToWork: "Recherche en machine learning",
-          personalStatement: "Passionné par l'IA depuis 10 ans..."
+        scholarshipInfo: {
+          destinationVoulue: "États-Unis",
+          universiteReceptrice: "MIT",
+          beneficiePrecedente: false,
+          derniereAnneeBourse: "2020",
+          planProjet: "Recherche approfondie en IA",
+          objectifs: "Améliorer les compétences en intelligence artificielle"
         },
         documents: [
           { type: "CV", fileName: "cv_benali.pdf", uploadDate: new Date(), verified: true }
